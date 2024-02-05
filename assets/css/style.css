@@ -1661,3 +1661,7 @@ section {
 #cover_quote{
   padding-top: 5%;
 }
+
+p {
+    text-align: justify; /* Justify the text within the paragraph */
+}
