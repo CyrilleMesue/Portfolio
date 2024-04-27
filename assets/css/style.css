@@ -2672,3 +2672,14 @@ section {
   right: 15px;
 }
 
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 1px;
+}
+
+pre {
+  white-space: pre-line;
+}
