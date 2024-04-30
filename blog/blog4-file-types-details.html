@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FastQC</title>
+  <title>Trimmonatic</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -88,7 +88,7 @@
           <ol>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../blog/blog.html">Blog</a></li>
-            <li>Quality Control of High-Volume Sequencing Data with FastQC: A Complete Guide</li>
+            <li>NGS Data Trimming and Filtering with Trimmomatic</li>
           </ol>
         </div>
 
@@ -106,43 +106,49 @@
             <article class="blog-details">
 
               <div class="post-img">
-                <img src="../assets/img/blog/blog2/cover.png" alt="" class="img-fluid">
+                <img src="../assets/img/blog/blog3/cover.jpg" alt="" class="img-fluid">
               </div>
 
-              <h2 class="title">Quality Control of High-Volume Sequencing Data with FastQC: A Complete Guide</h2>
+              <h2 class="title">NGS Data Trimming and Filtering with Trimmomatic</h2>
 
               <div class="meta-top">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../index.html#about">Cyrille Njume</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2024-04-26">April 26, 2024</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2024-04-30">April 30, 2024</time></a></li>
                 </ul>
               </div><!-- End meta top -->
 
               <div class="content">
-                <p>
-                  High-throughput sequencing technologies have revolutionized genomics by enabling the generation of massive data volumes in a short time. However, with great power comes great responsibility, and ensuring the quality of the generated data is crucial. This is where FastQC comes into play.
-                </p>
+                <p>Trimmomatic serves as a versatile preprocessing tool tailored for the trimming and filtering needs of Illumina next-generation sequencing (NGS) data. It excels in handling paired-end data accurately and efficiently, standing out for its adaptability and performance across various scenarios. Developed by Anthony M. Bolger, Marc Lohse, and Bjoern Usadel, Trimmomatic emerged to meet the demand for a tool that offers flexibility, precise handling of paired-end data, and robust performance.</p>
 
-                <p>FastQC analyzes a set of sequence files and generates a quality control report for each, comprising various modules to identify potential data issues. If no files are specified, it launches as an interactive graphical application; otherwise, it runs in non-interactive mode, suitable for standardized analysis pipelines.</p>
-
-                <p>FastQC, a Java-based application, offers modular analyses to swiftly highlight potential problems in sequence data. Its key functions include:</p>
+                <h3>Key Features</h3>
+                <p>Trimmomatic boasts several key features:</p>
 
                 <p>
                   <ol>
-                    <li>Importing data from BAM, SAM, or FastQ files (in any variant).</li>
-                    <li>Providing an overview to detect potential issues.</li>
-                    <li>Generating summary graphs and tables for rapid data assessment.</li>
-                    <li>Exporting results to an HTML-based permanent report.</li>
-                    <li>Supporting offline operation for automated report generation.</li>
+                    <li><b>Adapter Removal:</b> It effectively detects and eliminates adapter sequences from reads, a crucial step for ensuring the accuracy of subsequent analyses.</li>
+                    <li><b>Quality Filtering:</b> Trimmomatic provides two primary methods for quality filtering, utilizing Illumina quality scores to determine optimal trimming points.</li>
+                    <li><b>Sliding Window Quality Filtering:</b> This method scans from the 5' end of the read and trims the 3' end when the average quality drops below a specified threshold.</li>
+                    <li><b>Maximum Information Quality Filtering:</b> An alternative approach focusing on quality-based trimming.</li>
                   </ol>
                 </p>
 
-                <p>FastQC is a robust quality control tool tailored for high-throughput sequence data analysis. Written in Java, it requires a compatible Java Runtime Environment (JRE) for operation. The tool utilizes the Picard BAM/SAM Libraries, conveniently included in the download package. FastQC is released under the GPL v3 or later license. Feedback for further improvements is encouraged, with Simon Andrews serving as the initial contact.</p>
+
+                <p>Trimmomatic operates under the GPL V3 license and is cross-platform, requiring Java 1.5 or higher. It can be downloaded from the Usadel Lab website.</p>
 
                 <h3>Installation</h3>
-                <p>To begin using FastQC, ensure you have a suitable JRE installed. The tool includes the Picard BAM/SAM Libraries, eliminating the need for separate installations.</p>
+                <p>Installing Trimmomatic is straightforward:</p>
 
-                <h4>JRE Installation</h4>
+                <p>
+                  <ol>
+                    <li>Download the latest version from the official <a href ="http://www.usadellab.org/cms/?page=trimmomatic">website.</a></li>
+                    <li>Unzip the downloaded file to a directory of choice. Ensure Java Runtime Environment (JRE) is installed and accessible from the command line.</li>
+                  </ol>
+                </p>
+
+                <p>Once installed, Trimmomatic can be invoked from the command line using the `java -jar` command followed by the path to the Trimmomatic jar file and appropriate options.</p>
+
+                <h3>JRE Installation</h3>
                 <p>Download and install a suitable 64-bit JRE, ensuring that the Java application is in your path. On Linux, you can install Java using package managers such as apt or yum.</p>
 
                 <p>Ubuntu / Mint:</p>
@@ -156,61 +162,52 @@
                 <p>You should see something like:</p>
 
                 
-                  <pre>
-                    <code class="shell">>java -version
-                  openjdk version "11.0.2" 2019–01–15
-                  OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
-                  OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
-                    </code>
-                  </pre>
-
-                <h4>FastQC Installation</h4>
-                
-                <p>You have the option to acquire FastQC directly from the Babraham Bioinformatics <a href = "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">website</a> . The installation steps are simple:</p>
-
-                <p>
-                  <ol>
-                    <li>Choose the appropriate version according to your operating system.</li>
-                    <li>Extract the downloaded file to any location you prefer.</li>
-                    <li>If you’re using Linux, you may need to ensure that the fastqc file is executable by executing <code>chmod +x fastqc</code> in your terminal.</li>
-                    <li>Finally, launch FastQC by executing the fastqc executable located within the unzipped directory.</li>
-                  </ol>
-                </p>
+                <pre>
+                  <code class="shell">>java -version
+                openjdk version "11.0.2" 2019–01–15
+                OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
+                OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
+                  </code>
+                </pre>
 
                 <h3>Quick Start</h3>
-                <p>Once FastQC is installed, conducting a basic quality assessment on your sequence data is straightforward. Here’s a step-by-step guide:</p>
+                <p>To begin using Trimmomatic:</p>
 
                 <p>
                   <ol>
-                    <li>Open a terminal window (or command prompt for Windows users).</li>
-                    <li>Navigate to the directory where your FastQ files are located.</li>
-                    <li>Execute the command <code>fastqc data.fastq</code> to initiate the analysis. (Note: SAM/BAM files can also be used).</li>
+                    <li>Prepare input files, typically in FASTQ format.</li>
+                    <li>Execute Trimmomatic using a command like the example provided, which specifies input and output files, sets quality scores, and includes various trimming options.</li>
                   </ol>
                 </p>
 
-                <p>FastQC will process the file and produce an HTML report, along with a compressed archive containing the report and related files. You can view the HTML report using any web browser to examine the results.</p>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar PE -phred33 input_forward.fq.gz input_reverse.fq.gz output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz output_reverse_unpaired.fq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36</code></pre>
 
-                <p>Below are examples of commonly used commands in FastQC for customization:</p>
+                <p>This instruction delineates the input and output files for both forward and reverse reads, establishing a Phred quality score of 33. Additionally, it incorporates a range of trimming options, encompassing adapter elimination, removal of low-quality bases at the beginning and end of reads, sliding window trimming, and application of a minimum length filter.</p>
 
-                <p>
-                  <ol>
-                    <li>Analyzing Multiple Files: If you have multiple FastQ files, you can analyze them simultaneously by listing them after the <code>fastqc</code> command, separated by spaces. For instance: <code>fastqc file1.fastq file2.fastq file3.fastq</code>.</li>
-                    <li>Specifying Output Directory: To designate a different directory for output files, utilize the <code>-O</code> option followed by the directory path. Example: <code>fastqc -O /path/to/output/ data.fastq</code>.</li>
-                    <li>Skipping ZIP File Creation: By default, FastQC generates a zipped file containing the report and data files. If you only require the HTML report, employ the <code>--noextract</code> option. For instance: <code>fastqc --noextract data.fastq</code>.</li>
-                    <li>Adjusting the Number of Threads: FastQC can process multiple files concurrently using multiple threads. Utilize the <code>-t</code> option followed by the desired thread count. Example: <code>fastqc -t 4 file1.fastq file2.fastq</code>.</li>
-                    <li>Running in Non-Interactive Mode: If integrating FastQC into a larger automated pipeline, running it in non-interactive mode may be preferable. Utilize the <code>--nogroup</code> option to deactivate the interactive grouping of bases for each sequence. Example: <code>fastqc --nogroup data.fastq</code>.</li>
-                  </ol>
-                </p>
+                <h3>Some Popular Commands</h3>
+                <p>Several common commands for preprocessing NGS data with Trimmomatic include:</p>
+                <h4>Adapter Trimming</h4>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar PE -phred33 input_forward.fq.gz input_reverse.fq.gz output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz output_reverse_unpaired.fq.gz ILLUMINACLIP:adapter_sequences.fa:2:30:10</code></pre>
+                <p>This directive employs the ILLUMINACLIP feature to eliminate adapter sequences. Here, adapter_sequences.fa represents the file housing the adapter sequences, while 2 denotes the seed mismatches, 30 stands for the palindrome clip threshold, and 10 signifies the simple clip threshold.</p>
 
-                <p>For a complete list of commands and options, refer to the official documentation or run <code>fastqc -h</code> in your terminal.</p>
+                <h4>Quality Trimming</h4>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar SE -phred33 input.fq.gz output_trimmed.fq.gz LEADING:20 TRAILING:20</code></pre>
+                <p>This instruction involves the trimming of low-quality bases at the beginning (LEADING) and end (TRAILING) of the reads, employing a quality threshold of 20.</p>
 
-                <p>FastQC is an essential tool for anyone working with high-throughput sequencing data. By quickly assessing data quality, it ensures reliable downstream analyses, making it indispensable for both seasoned bioinformaticians and beginners alike.</p>
+                <h4>Sliding Window Trimming</h4>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar SE -phred33 input.fq.gz output_trimmed.fq.gz SLIDINGWINDOW:4:15</code></pre>
+                <p>With the SLIDINGWINDOW option, trimming occurs when the average quality within a 4-base window drops below 15.</p>
+                
+                <h4>Minimum Length Filtering</h4>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar SE -phred33 input.fq.gz output_trimmed.fq.gz MINLEN:36</code></pre>
 
-                <p>For more details on interpreting FastQC results, visit the <a href = "https://cyrillemesue.medium.com/read-quality-control-and-trimming-in-genomic-analysis-83d8da651f35">Quality Control and Trimming in Genomic Analysis guide by Simon Andrews.</a></p>
+                <p>MINLEN removes reads that are shorter than the defined length after trimming, which is 36 bases in this instance.</p>
 
-                <h4>Reference</h4>
+                <h4>Cropping</h4>
+                <pre><code class="shell">java -jar trimmomatic-0.39.jar SE -phred33 input.fq.gz output_trimmed.fq.gz CROP:75</code></pre>
+                <p>The CROP option trims the read to a designated length, in this case, 75 bases, without considering the quality.</p>
+                <p>Trimmomatic effectively prepares NGS data for downstream analysis, offering a wide array of options to ensure high-quality results. Its versatility and efficiency make it a preferred tool for bioinformaticians working with Illumina sequencing data.</p>
 
-                <p>Andrews, S. (Year). FastQC: A Quality Control Tool for High Throughput Sequence Data [Software]. Available from <a href = "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a></p>
               </div><!-- End post content -->
 
 
