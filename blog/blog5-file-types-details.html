@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RNASeq UpStream</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/bioinformatics.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Table of Contents CSS -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"> 
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="../assets/css/variables.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- <h1 class="logo"><a href="index.html">Bioinformatics Influencer</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="../index.html" class="logo"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
+          <li><a class="nav-link scrollto o" href="../index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="../blog/blog.html">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../index.html#cta">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog/blog.html">Blog</a></li>
+            <li>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog" data-spy="scroll" data-target="#toc">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="../assets/img/blog/blog5/cover.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../index.html#about">Cyrille Njume</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2024-05-06">May 06, 2024</time></a></li>
+                </ul>
+              </div><!-- End meta top -->
+
+              <div class="content">
+
+                <p>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts</p>
+                <p>RNA sequencing data is typically stored in fastq format (refer to the article for details on fastq format). These files typically comprise short RNA reads awaiting alignment to the reference transcriptome. To sequence genomes and transcriptomes of humans and other organisms for comparison, reference genomes have been assembled for each species.</p>
+                <p>This tutorial will cover the assessment of read quality, read cleaning, alignment to the reference transcriptome, and read quantification. Each term will be thoroughly explained in its corresponding section below. We will construct a pipeline integrating various bioinformatics tools to perform each task. This pipeline will be implemented in a bash script and executed via the command line.</p>
+                <p>The necessary tools for pipeline development include <a href= "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>, <a href= "https://multiqc.info/">MultiQC</a>, <a href= "http://www.usadellab.org/cms/?page=trimmomatic">Trimmonatic</a>, <a href= "http://daehwankimlab.github.io/hisat2/">HISAT2</a>, <a href= "http://www.htslib.org/download/">Samtools</a>, and <a href= "https://subread.sourceforge.net/featureCounts.html">FeatureCounts</a>. The installation process for these tools will be briefly outlined, but first, I will explain how to obtain a sample dataset for this tutorial.</p>
+
+                <h3>How to Download Data</h3>
+                <p>A substantial amount of RNA sequencing data is regularly deposited on the Gene Expression Omnibus (GEO) database. Various research groups analyze biological samples and share their data with the public. To learn more about GEO, visit <a href="https://www.ncbi.nlm.nih.gov/geo/">https://www.ncbi.nlm.nih.gov/geo/</a>.</p>
+                <p>In this tutorial, I utilize the dataset “RNAseq in Alzheimer’s Disease patients” with accession <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53697">GSE53697</a>. While the data can be manually downloaded by clicking the link on each sample and following the subsequent download instructions, I will streamline the process using the SRA-toolkit to automate downloads. Additionally, I will sub-sample the reads for each sample to reduce the data size for tutorial purposes.</p>
+                <p>Create a script named download_data.sh as follows:</p>
+                <pre><code class="bash">#!/bin/bash
+
+                # Create a folder named "Reads" if it doesn't exist
+                mkdir -p Reads
+
+                # Array of SRR accession numbers
+                SRR_LIST=(
+                    SRR2422918
+                    SRR2422919
+                    SRR2422920
+                    SRR2422921
+                    SRR2422922
+                    SRR2422923
+                    SRR2422924
+                    SRR2422925
+                    SRR2422926
+                    SRR2422927
+                    SRR2422928
+                    SRR2422929
+                    SRR2422930
+                    SRR2422931
+                    SRR2422932
+                    SRR2422933
+                    SRR2422934
+                )
+
+                # Loop through each accession number
+                for SRR in "${SRR_LIST[@]}"; do
+                    echo "Downloading and extracting reads for $SRR..."
+
+                    # Extract 1,000,000 reads from the SRA file
+                    fastq-dump --split-files -X 100000 $SRR -O Reads
+                done
+
+                echo "Download and extraction complete."
+                </code></pre>
+                <p>The dataset comprises 17 samples, and the script <code>download_data.sh</code> is provided to facilitate the download process. Ensure the script is located in your current directory.</p>
+                <p>To maintain organization and conciseness, create a folder named of your choosing anywhere in your computer’s file system. All operations described in this tutorial should be conducted within this folder (directory). Subfolders will be created within the project folder to store various project data.</p>
+                <p>To maintain organization and conciseness, create a folder named of your choosing anywhere in your computer’s file system. All operations described in this tutorial should be conducted within this folder (directory). Subfolders will be created within the project folder to store various project data.</p>
+                <pre><code>bash download_data.sh</code></pre>
+                <p>Feel free to explore the <code>download_data.sh</code> script and adjust the subsample size (using the <code>—X</code> option) as needed. You may opt to download the complete data for each sample if your computer can handle the computational burden (approximately 16GB RAM) by omitting the <code>—X</code> option entirely. Otherwise, the current sample size is designed to ensure the pipeline runs smoothly on any machine with at least 4GB of RAM.</p>
+                
+                <h3>Install Tools</h3>
+                <p>FastQC can be installed by following the instructions on the FastQC <a href="https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt">installation page</a>. For Linux distributions, simply run <code>sudo apt install fastqc</code> in your terminal.</p>
+                <p>MultiQC can be installed by running <code>pip install multiqc</code> or <code>conda install multiqc</code> in your terminal.</p>
+                <p>Download the Trimmonatic <a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip">binary</a> to any location on your computer. Unzip the downloaded file and copy the .jar file and “adapters” folder to your project directory.</p>
+                <p>Visit the Hisat2 official page and follow the <a href = "http://daehwankimlab.github.io/hisat2/manual/">installation instructions</a>. Hisat2 generates the genome index for the species being analyzed. You can download the human genome reference index by clicking <a href="https://genome-idx.s3.amazonaws.com/hisat/grch38_genome.tar.gz">here</a>. Once downloaded, unzip the index and copy its contents to your project directory.</p>
+                <p>Samtools can be installed by following the instructions provided on the <a href="http://www.htslib.org/download/">official website</a>.</p>
+                <p>You can install featureCounts by running <code>conda create -c bioconda -n featurecounts subread</code>.</p>
+                
+                <h3>Quality Control</h3>
+                <p>Before delving into the analysis, ensuring the quality of the sequencing data is crucial. Quality control (QC) helps identify issues such as sequencing errors, adapter contamination, or poor-quality reads that could affect downstream analysis. FastQC is a powerful tool for assessing sequencing data quality, providing detailed reports on metrics such as per-base sequence quality, GC content, and sequence duplication levels. MultiQC is handy for aggregating FastQC reports into a single, navigable HTML report.</p>
+                <p>FastQC reports can be generated from fastq, bam, or sam files, making it versatile across different stages of the pipeline. In this workflow, we’ll utilize FastQC before and after trimming the sequences to evaluate the impact of trimming on quality.</p>
+                <p>To assess the quality of a read, the command is simply:</p>
+                <pre><code class="shell">fastqc sample.fastq -o output_directory</code></pre>
+                <p>FastQC can process multiple fastq or alignment files independently. In the case of paired reads, each pair is assessed individually.</p>
+                <p>For this tutorial, we’ll build each step of the pipeline into a bash script. Create a bash script in your project directory (e.g., run_pipeline.sh), and ensure it’s executable with the shebang:</p>
+                <pre><code class="bash">#!/bin/bash</code>To organize files, we’ll create separate directories for each project where the outputs will be stored. All output directories will be under the data directory. Here’s the script:</pre>
+                <pre><code class="bash">SECONDS=0
+
+# Make necessary directories
+mkdir data data/fastqc1 data/trimmed_reads data/fastqc2 data/alignments data/quant
+echo "Output Directories created!!!"
+
+
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."</code></pre>
+                <p>Run the script on your terminal to make it executable:</p>
+                <pre><code class="shell">chmod +x run_pipeline.sh</code></pre>
+                <p>Then execute:</p>
+                <pre><code class="bash">./run_pipeline.sh</code></pre>
+                <p>You’ll see the script run in just a few seconds, and all subdirectories are created.</p>
+                <p>Now, let’s complete the script for the FastQC process. We’ll use a for loop in bash to process the quality of two samples:</p>
+                <pre><code class="bash">#!/bin/bash
+
+SECONDS=0
+
+# Make necessary directories
+mkdir data data/fastqc1 data/trimmed_reads data/fastqc2 data/alignments data/quant
+echo "Output Directories created!!!"
+
+count=0
+for file in Reads/*_1.fastq; do
+    if [ "$count" -lt 2 ]; then
+        # Increment the count
+        ((count++))
+        echo "Processing file: $file"
+
+        # Place your processing commands here
+        base=$(basename -s _1.fastq "$file")
+
+        # Run fastqc
+        fastqc "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" -o data/fastqc1
+    else
+        break  # Exit the loop after processing the first two files
+    fi
+done</code></pre>
+                <p>Then execute:</p>
+                <pre><code class="bash">./run_pipeline.sh</code></pre>
+                <p>This script will execute FastQC on the first two samples in the Reads folder (four files since these are paired-end). The FastQC outputs are in the data/fastqc1 directory. You can explore the results by opening the HTML files. You should see something similar to <a href="https://cnjumebioinfo.com/support/SRR2422918_1_fastqc.html">this</a>.</p>
+                <p>To compile all FastQC reports into one, use MultiQC:</p>
+                <pre><code class="shell">multiqc data/fastqc1 -o data/multiqc1</code></pre>
+                <p>You can view a sample MultiQC report <a href="https://cnjumebioinfo.com/support/multiqc_report.html">here</a>.</p>
+                
+                <h3>Read Trimming</h3>
+                <p>After QC, the next step is read trimming to remove any low-quality bases or adapter sequences that might affect downstream analysis. Trimmonatic is a versatile tool for read trimming, capable of handling various sequencing platforms and adapter types. Please refer to the Trimmonatic documentation for reference. The application for single-end and paired-end reads differs, and the code provided in this tutorial is for paired-end reads only.</p>
+                <p>To trim reads, add this chunk of code inside the for loop:</p>
+                <pre><code class="bash"># Trimming reads
+java -jar trimmomatic-0.39.jar PE "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" \
+        "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R1.fastq" \
+        "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R2.fastq" TRAILING:10 -phred33 -threads 4</code></pre>
+                <p>Here’s the updated script:</p>
+                <pre><code class="bash">#!/bin/bash
+
+SECONDS=0
+
+# Make necessary directories
+mkdir data data/fastqc1 data/trimmed_reads data/fastqc2 data/alignments data/quant
+echo "Output Directories created!!!"
+
+count=0
+for file in Reads/*_1.fastq; do
+    if [ "$count" -lt 2 ]; then
+        # Increment the count
+        ((count++))
+        echo "Processing file: $file"
+
+        # Place your processing commands here
+        base=$(basename -s _1.fastq "$file")
+
+        # Run fastqc
+        fastqc "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" -o data/fastqc1
+
+        # Run trimmomatic to trim reads with poor quality
+        java -jar trimmomatic-0.39.jar PE "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" \
+        "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R1.fastq" \
+        "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R2.fastq" TRAILING:10 -phred33 -threads 4
+
+        echo "Trimmomatic finished running for ${base}!"
+
+        fastqc "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" -o data/fastqc2
+        echo "Fastqc completed for ${base}"
+
+    else
+        break  # Exit the loop after processing the first two files
+    fi
+done
+
+# Run MultiQC
+multiqc data/fastqc1 -o data/multiqc1
+
+# Run MultiQC on second Fastqc reports
+multiqc data/fastqc2 -o data/multiqc2
+
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."</code></pre>
+                <p>Notice that MultiQC is applied outside the for loop so that all FastQC reports are assembled into one. The code inside the for loop processes a single sample. After trimming reads, FastQC and MultiQC are applied again to assess the quality. Further details on quality control will be covered in a future tutorial.</p>
+
+                <h3>Read Mapping/Alignment</h3>
+                <p>Once the reads are trimmed and of high quality, the next step is to align them to a reference transcriptome. HISAT2 is a fast and sensitive aligner that efficiently maps RNA-seq reads to the reference genome or transcriptome. It builds a genome index for the reference species, enabling accurate alignment even for large genomes. In this tutorial, we’ve already downloaded pre-built genome indices.</p>
+                <p>HISAT2 implementation is straightforward. First, ensure that the genome index is downloaded and stored in the project directory. To align a sample to a reference transcriptome, you can use the following code:</p>
+                <pre><code class="shell"># Run HISAT2 for alignment
+hisat2 -q -x grch38/genome -1 "data/trimmed_reads/SRR2422918.trimmed.paired.R1.fastq" -2 "data/trimmed_reads/SRR2422918.trimmed.paired.R2.fastq" | samtools sort -o "data/alignments/SRR2422918.bam"</code></pre>
+                <p></p>
+                <pre><code class="shell"># Run HISAT2 for alignment
+hisat2 -q -x grch38/genome -1 "data/trimmed_reads/SRR2422919.trimmed.paired.R1.fastq" -2 "data/trimmed_reads/SRR2422919.trimmed.paired.R2.fastq" | samtools sort -o "data/alignments/SRR2422919.bam"</code></pre>
+                <p>Notice that HISAT2 is run on the trimmed reads, which are more likely to be of good quality than untrimmed reads. Additionally, note the path <code>grch38/genome</code>. This is the path to your genome index, which you downloaded and unzipped into your project directory. Also, observe that <code>samtools</code> is used to sort the alignments.</p>
+                <p>This implementation is for paired reads only. For options regarding single-end reads, you can run the command:</p>
+                <pre><code class="bash">hisat2 -h</code></pre>
+                
+                <h3>Read Quantification</h3>
+                <p>After alignment, the final step is read quantification, where we estimate the abundance of each transcript in the sample. FeatureCounts is a popular tool for counting reads mapped to genomic features such as genes, exons, or transcripts. It assigns reads to features based on their alignment positions and generates count matrices that can be used for differential expression analysis and other downstream applications. In this exercise, we are counting genes since we will be performing gene expression analysis in the future.</p>
+                <p>To quantify reads, first, we need to download an annotation file. The Ensembl database contains such files. For our use, refer to the latest human transcriptome annotation file <a href="https://ftp.ensembl.org/pub/release-111/gtf/homo_sapiens/Homo_sapiens.GRCh38.111.gtf.gz">here</a>. A new version may be available in the future, so it’s best to download the GTF file straight from the source database. Unzip the annotation file and copy its content to your project directory. Then, we simply run the code on the terminal:</p>
+                <pre><code class="bash"># # Array to hold all BAM files
+BAM_FILES=("data/alignments/SRR2422918.bam" "data/alignments/SRR2422919.bam")
+
+# Run featureCounts for quantification on all BAM files
+featureCounts -a Homo_sapiens.GRCh38.111.gtf -T 10 -o data/quant/output_data.txt "${BAM_FILES[@]}"</code></pre>
+                <p>The <code>data/quant/output_data.txt</code> file will look like this:</p>
+                <img src="../assets/img/blog/blog5/img1.png" alt="" class="img-fluid">
+                <figcaption>featureCounts raw output</figcaption>
+                <p>This output is raw and unprocessed. To clean it up and extract the count data, we run:</p>
+                <pre><code class="bash"># clean feature matrix
+cut -f1,7- -s data/quant/output_data.txt | cat > data/quant/counts_data.txt</code></pre>
+                <p>The data will look like this now:</p>
+                <img src="../assets/img/blog/blog5/img2.png" alt="" class="img-fluid">
+                <figcaption>Raw count data from featureCounts</figcaption>
+                <p>It’s more presentable and ready for downstream analysis.</p>
+
+                <h3>Putting Everything Together</h3>
+                <p>Now that we’ve covered the individual steps of the analysis pipeline, let’s put everything together into a cohesive workflow. This bash script automates the entire process, from QC to read quantification, for all samples in the dataset. By integrating various bioinformatics tools and best practices, we ensure reproducibility and consistency across samples, facilitating efficient RNA-seq data analysis and uncovering valuable biological insights.</p>
+                <pre><code class="bash">#!/bin/bash
+
+SECONDS=0
+
+# Make necessary directories
+mkdir data data/fastqc1 data/trimmed_reads data/fastqc2 data/alignments data/quant
+echo "Output Directories created!!!"
+
+# Array to hold all BAM files
+BAM_FILES=()
+
+for file in Reads/*_1.fastq; do
+    echo "Processing file: $file"
+
+    # Place your processing commands here
+    base=$(basename -s _1.fastq "$file")
+
+    # Run fastqc
+    fastqc "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" -o data/fastqc1
+
+    # Run trimmomatic to trim reads with poor quality
+    java -jar trimmomatic-0.39.jar PE "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" \
+    "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R1.fastq" \
+    "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R2.fastq" TRAILING:10 -phred33 -threads 4
+
+    echo "Trimmomatic finished running for ${base}!"
+
+    # Run fastqc on trimmed reads
+    fastqc "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" -o data/fastqc2
+    echo "Fastqc completed for ${base}"
+
+    # Run HISAT2 for alignment
+    hisat2 -q -x grch38/genome -1 "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" -2 "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" | samtools sort -o "data/alignments/${base}.bam"
+    echo "HISAT2 finished running for ${base}!"
+
+    # Add the BAM file to the array
+    BAM_FILES+=("data/alignments/${base}.bam")
+done
+
+# Run MultiQC
+multiqc data/fastqc1 -o data/multiqc1
+
+# Run MultiQC on second Fastqc reports
+multiqc data/fastqc2 -o data/multiqc2
+
+# Run featureCounts for quantification on all BAM files
+featureCounts -a Homo_sapiens.GRCh38.111.gtf -T 10 -o data/quant/output_data.txt "${BAM_FILES[@]}"
+
+# clean feature matrix
+cut -f1,7- -s data/quant/output_data.txt | cat > data/quant/counts_data.txt
+
+# echo "featureCounts finished running for all samples!"
+
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."</code></pre>
+                <p>In each process, especially the alignment and quantification steps, tools can be swapped, such as using STAR, Cufflinks, BWA, Salmon, and other tools. This flexibility allows researchers to adapt their pipeline according to specific project requirements.</p>
+                <p>Thank you so much for reading my blog and following until the end. In the next installment, we’ll delve into streamlining downstream processes in RNA-seq analysis. Additionally, I’ll demonstrate how to build a complete end-to-end RNA-seq pipeline covering quality control to gene expression analysis using DESeq2 in a Nextflow workflow. Stay tuned for more exciting insights and practical tutorials!</p>
+
+                <h3>References</h3>
+                <ol>
+                    <li>FastQC: <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a></li>
+                    <li>MultiQC: <a href="https://multiqc.info/">https://multiqc.info/</a></li>
+                    <li>Trimmonatic: <a href="http://www.usadellab.org/cms/?page=trimmomatic">http://www.usadellab.org/cms/?page=trimmomatic</a></li>
+                    <li>HISAT2: <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">https://ccb.jhu.edu/software/hisat2/index.shtml</a></li>
+                    <li>SAMtools: <a href="http://www.htslib.org/">http://www.htslib.org/</a></li>
+                    <li>FeatureCounts: <a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></li>
+                    <li>Gene Expression Omnibus (GEO): <a href="https://www.ncbi.nlm.nih.gov/geo/">https://www.ncbi.nlm.nih.gov/geo/</a></li>
+                    <li>RNAseq in Alzheimer’s Disease patients dataset (GSE53697): <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53697">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53697</a></li>
+                    <li>Ensembl database: <a href="https://www.ensembl.org/index.html">https://www.ensembl.org/index.html</a></li>
+                </ol>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+
+              </div><!-- End post content -->
+
+
+            </article><!-- End blog post -->
+
+            <div class="post-author d-flex align-items-center">
+              <img src="../assets/img/profile.png" class="rounded-circle flex-shrink-0" alt="">
+              <div>
+                <h4>Cyrille Njume</h4>
+                <div class="social-links">
+                  <a href="https://twitter.com/CyrilleMesue#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100078245222182"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cy_njume/"><i class="biu bi-instagram"></i></a>
+                  <a href="https://join.skype.com/invite/Io32VYWhujAc" class="google-plus"><i class="bi bi-skype"></i></a>
+                  <a href="https://www.linkedin.com/in/cyrillenjume/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <p>
+                  Hello! Thanks for taking the time to read my blog post. I'd love to hear your thoughts and insights, so please feel free to share them in the comment section below. Let's connect on social media too!
+                </p>
+              </div>
+            </div><!-- End post author -->
+
+          <giscus-widget
+            id="comments"
+            repo="CyrilleMesue/Portfolio"
+            repoid="R_kgDOH9qPaA"
+            category="General"
+            categoryid="DIC_kwDOH9qPaM4Ce3Oh"
+            mapping="title"
+            term="Welcome to giscus!"
+            reactionsenabled="1"
+            emitmetadata="0"
+            inputposition="top"
+            theme="light_protanopia"
+            lang="en"
+            loading="lazy"
+          ></giscus-widget>
+
+          </div>
+
+          <div class="col-lg-4">
+            
+            <div class="sidebar">
+              <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div><!-- End Blog Sidebar -->
+
+            <div class="sidebar">
+              <div class="sidebar-item recent-posts">
+                <h3 class="sidebar-title">Recent Posts</h3>
+                <div class="mt-3" id="recentPosts">
+                  <!-- Recent posts will be dynamically generated here -->
+                </div>
+              </div>
+            </div><!-- End Blog Sidebar -->
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Bioinformatics Developer</span></strong>. All Rights Reserved
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://twitter.com/CyrilleMesue" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100078245222182" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/cy_njume/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://join.skype.com/invite/Io32VYWhujAc" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="https://www.linkedin.com/in/cyrillenjume/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Table of Contents JS -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+
+  <script>
+    // Load the JSON file
+    fetch('https://raw.githubusercontent.com/CyrilleMesue/archives/main/jsons/recent-posts.json')
+      .then(response => response.json())
+      .then(data => {
+        const recentPostsContainer = document.getElementById('recentPosts');
+
+        // Loop through each post and create HTML
+        data.forEach(post => {
+          const postItem = document.createElement('div');
+          postItem.classList.add('post-item', 'mt-3');
+
+          const image = document.createElement('img');
+          image.src = post.image;
+          image.alt = '';
+          image.classList.add('flex-shrink-0');
+          postItem.appendChild(image);
+
+          const postDetails = document.createElement('div');
+          const title = document.createElement('h4');
+          const link = document.createElement('a');
+          link.href = post.blogPath;
+          link.textContent = post.title;
+          title.appendChild(link);
+          postDetails.appendChild(title);
+
+          const time = document.createElement('time');
+          time.setAttribute('datetime', '2020-01-01'); // Change date if needed
+          time.textContent = post.date;
+          postDetails.appendChild(time);
+
+          postItem.appendChild(postDetails);
+
+          recentPostsContainer.appendChild(postItem);
+        });
+      })
+      .catch(error => console.error('Error fetching recent posts:', error));
+  </script>
+
+<!-- esm.sh -->
+<script type="module" src="https://esm.sh/giscus"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
