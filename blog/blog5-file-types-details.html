@@ -186,7 +186,8 @@
                 <pre><code class="shell">fastqc sample.fastq -o output_directory</code></pre>
                 <p>FastQC can process multiple fastq or alignment files independently. In the case of paired reads, each pair is assessed individually.</p>
                 <p>For this tutorial, we’ll build each step of the pipeline into a bash script. Create a bash script in your project directory (e.g., run_pipeline.sh), and ensure it’s executable with the shebang:</p>
-                <pre><code class="bash">#!/bin/bash</code>To organize files, we’ll create separate directories for each project where the outputs will be stored. All output directories will be under the data directory. Here’s the script:</pre>
+                <pre><code class="bash">#!/bin/bash</code></pre>
+                <p>To organize files, we’ll create separate directories for each project where the outputs will be stored. All output directories will be under the data directory. Here’s the script:</p>
                 <pre><code class="bash">SECONDS=0
 
 # Make necessary directories
