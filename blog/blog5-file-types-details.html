@@ -88,7 +88,7 @@
           <ol>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../blog/blog.html">Blog</a></li>
-            <li>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimmonatic, HISAT2, SAMtools, and FeatureCounts</li>
+            <li>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimmomatic, HISAT2, SAMtools, and FeatureCounts</li>
           </ol>
         </div>
 
@@ -109,7 +109,7 @@
                 <img src="../assets/img/blog/blog5/cover.jpg" alt="" class="img-fluid">
               </div>
 
-              <h2 class="title">A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts</h2>
+              <h2 class="title">A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimmomatic, HISAT2, SAMtools, and FeatureCounts</h2>
 
               <div class="meta-top">
                 <ul>
@@ -120,10 +120,10 @@
 
               <div class="content">
 
-                <p>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts</p>
+                <p>A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimmomatic, HISAT2, SAMtools, and FeatureCounts</p>
                 <p>RNA sequencing data is typically stored in fastq format (refer to the article for details on fastq format). These files typically comprise short RNA reads awaiting alignment to the reference transcriptome. To sequence genomes and transcriptomes of humans and other organisms for comparison, reference genomes have been assembled for each species.</p>
                 <p>This tutorial will cover the assessment of read quality, read cleaning, alignment to the reference transcriptome, and read quantification. Each term will be thoroughly explained in its corresponding section below. We will construct a pipeline integrating various bioinformatics tools to perform each task. This pipeline will be implemented in a bash script and executed via the command line.</p>
-                <p>The necessary tools for pipeline development include <a href= "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>, <a href= "https://multiqc.info/">MultiQC</a>, <a href= "http://www.usadellab.org/cms/?page=trimmomatic">Trimmonatic</a>, <a href= "http://daehwankimlab.github.io/hisat2/">HISAT2</a>, <a href= "http://www.htslib.org/download/">Samtools</a>, and <a href= "https://subread.sourceforge.net/featureCounts.html">FeatureCounts</a>. The installation process for these tools will be briefly outlined, but first, I will explain how to obtain a sample dataset for this tutorial.</p>
+                <p>The necessary tools for pipeline development include <a href= "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>, <a href= "https://multiqc.info/">MultiQC</a>, <a href= "http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a>, <a href= "http://daehwankimlab.github.io/hisat2/">HISAT2</a>, <a href= "http://www.htslib.org/download/">Samtools</a>, and <a href= "https://subread.sourceforge.net/featureCounts.html">FeatureCounts</a>. The installation process for these tools will be briefly outlined, but first, I will explain how to obtain a sample dataset for this tutorial.</p>
 
                 <h3>How to Download Data</h3>
                 <p>A substantial amount of RNA sequencing data is regularly deposited on the Gene Expression Omnibus (GEO) database. Various research groups analyze biological samples and share their data with the public. To learn more about GEO, visit <a href="https://www.ncbi.nlm.nih.gov/geo/">https://www.ncbi.nlm.nih.gov/geo/</a>.</p>
@@ -174,7 +174,7 @@
                 <h3>Install Tools</h3>
                 <p>FastQC can be installed by following the instructions on the FastQC <a href="https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt">installation page</a>. For Linux distributions, simply run <code>sudo apt install fastqc</code> in your terminal.</p>
                 <p>MultiQC can be installed by running <code>pip install multiqc</code> or <code>conda install multiqc</code> in your terminal.</p>
-                <p>Download the Trimmonatic <a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip">binary</a> to any location on your computer. Unzip the downloaded file and copy the .jar file and “adapters” folder to your project directory.</p>
+                <p>Download the Trimmomatic <a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip">binary</a> to any location on your computer. Unzip the downloaded file and copy the .jar file and “adapters” folder to your project directory.</p>
                 <p>Visit the Hisat2 official page and follow the <a href = "http://daehwankimlab.github.io/hisat2/manual/">installation instructions</a>. Hisat2 generates the genome index for the species being analyzed. You can download the human genome reference index by clicking <a href="https://genome-idx.s3.amazonaws.com/hisat/grch38_genome.tar.gz">here</a>. Once downloaded, unzip the index and copy its contents to your project directory.</p>
                 <p>Samtools can be installed by following the instructions provided on the <a href="http://www.htslib.org/download/">official website</a>.</p>
                 <p>You can install featureCounts by running <code>conda create -c bioconda -n featurecounts subread</code>.</p>
@@ -235,7 +235,7 @@ done</code></pre>
                 <p>You can view a sample MultiQC report <a href="https://cnjumebioinfo.com/support/multiqc_report.html">here</a>.</p>
                 
                 <h3>Read Trimming</h3>
-                <p>After QC, the next step is read trimming to remove any low-quality bases or adapter sequences that might affect downstream analysis. Trimmonatic is a versatile tool for read trimming, capable of handling various sequencing platforms and adapter types. Please refer to the Trimmonatic documentation for reference. The application for single-end and paired-end reads differs, and the code provided in this tutorial is for paired-end reads only.</p>
+                <p>After QC, the next step is read trimming to remove any low-quality bases or adapter sequences that might affect downstream analysis. Trimmomatic is a versatile tool for read trimming, capable of handling various sequencing platforms and adapter types. Please refer to the Trimmomatic documentation for reference. The application for single-end and paired-end reads differs, and the code provided in this tutorial is for paired-end reads only.</p>
                 <p>To trim reads, add this chunk of code inside the for loop:</p>
                 <pre><code class="bash"># Trimming reads
 java -jar trimmomatic-0.39.jar PE "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" \
@@ -383,7 +383,7 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."</cod
                 <ol>
                     <li>FastQC: <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a></li>
                     <li>MultiQC: <a href="https://multiqc.info/">https://multiqc.info/</a></li>
-                    <li>Trimmonatic: <a href="http://www.usadellab.org/cms/?page=trimmomatic">http://www.usadellab.org/cms/?page=trimmomatic</a></li>
+                    <li>Trimmomatic: <a href="http://www.usadellab.org/cms/?page=trimmomatic">http://www.usadellab.org/cms/?page=trimmomatic</a></li>
                     <li>HISAT2: <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">https://ccb.jhu.edu/software/hisat2/index.shtml</a></li>
                     <li>SAMtools: <a href="http://www.htslib.org/">http://www.htslib.org/</a></li>
                     <li>FeatureCounts: <a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></li>
