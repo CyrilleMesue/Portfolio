@@ -293,7 +293,7 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."</cod
                 <p>HISAT2 implementation is straightforward. First, ensure that the genome index is downloaded and stored in the project directory. To align a sample to a reference transcriptome, you can use the following code:</p>
                 <pre><code class="shell"># Run HISAT2 for alignment
 hisat2 -q -x grch38/genome -1 "data/trimmed_reads/SRR2422918.trimmed.paired.R1.fastq" -2 "data/trimmed_reads/SRR2422918.trimmed.paired.R2.fastq" | samtools sort -o "data/alignments/SRR2422918.bam"</code></pre>
-                <p></p>
+                <p>Also, run the alignment for sample SRR2422919:</p>
                 <pre><code class="shell"># Run HISAT2 for alignment
 hisat2 -q -x grch38/genome -1 "data/trimmed_reads/SRR2422919.trimmed.paired.R1.fastq" -2 "data/trimmed_reads/SRR2422919.trimmed.paired.R2.fastq" | samtools sort -o "data/alignments/SRR2422919.bam"</code></pre>
                 <p>Notice that HISAT2 is run on the trimmed reads, which are more likely to be of good quality than untrimmed reads. Additionally, note the path <code>grch38/genome</code>. This is the path to your genome index, which you downloaded and unzipped into your project directory. Also, observe that <code>samtools</code> is used to sort the alignments.</p>
