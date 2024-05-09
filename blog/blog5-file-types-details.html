@@ -309,13 +309,13 @@ BAM_FILES=("data/alignments/SRR2422918.bam" "data/alignments/SRR2422919.bam")
 # Run featureCounts for quantification on all BAM files
 featureCounts -a Homo_sapiens.GRCh38.111.gtf -T 10 -o data/quant/output_data.txt "${BAM_FILES[@]}"</code></pre>
                 <p>The <code>data/quant/output_data.txt</code> file will look like this:</p>
-                <img src="../assets/img/blog/blog5/img1.png" alt="" class="img-fluid">
+                <img src="../assets/img/blog/blog5/img2.png" alt="" class="img-fluid">
                 <figcaption>featureCounts raw output</figcaption>
                 <p>This output is raw and unprocessed. To clean it up and extract the count data, we run:</p>
                 <pre><code class="bash"># clean feature matrix
 cut -f1,7- -s data/quant/output_data.txt | cat > data/quant/counts_data.txt</code></pre>
                 <p>The data will look like this now:</p>
-                <img src="../assets/img/blog/blog5/img2.png" alt="" class="img-fluid">
+                <img src="../assets/img/blog/blog5/img5.png" alt="" class="img-fluid">
                 <figcaption>Raw count data from featureCounts</figcaption>
                 <p>It’s more presentable and ready for downstream analysis.</p>
 
