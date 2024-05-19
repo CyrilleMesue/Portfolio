@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RNASeq DownStream</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/bioinformatics.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Table of Contents CSS -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"> 
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="../assets/css/variables.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- <h1 class="logo"><a href="index.html">Bioinformatics Influencer</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="../index.html" class="logo"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
+          <li><a class="nav-link scrollto o" href="../index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="../blog/blog.html">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../index.html#cta">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog/blog.html">Blog</a></li>
+            <li>Automating RNA-Seq Downstream Analysis with DESeq2 and ClusterProfiler</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog" data-spy="scroll" data-target="#toc">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="../assets/img/blog/blog6/cover.png" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">Automating RNA-Seq Downstream Analysis with DESeq2 and ClusterProfiler</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../index.html#about">Cyrille Njume</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2024-05-19">May 19, 2024</time></a></li>
+                </ul>
+              </div><!-- End meta top -->
+
+              <div class="content">
+
+                <p>In the realm of transcriptomics, RNA-Seq has become a powerful tool for understanding gene expression patterns. However, the journey from raw data to meaningful biological insights involves several intricate steps of data processing and analysis. In this tutorial, we will walk through a comprehensive RNA-Seq downstream analysis workflow using DESeq2 and ClusterProfiler, split into distinct stages for clarity and automation.</p>
+
+                <h3>Prerequisites</h3>
+                <p><ul>
+                  <li>Basic knowledge of RNA-Seq data and its analysis</li>
+                  <li>Familiarity with the R programming language</li>
+                  <li>Proficiency in using the command-line interface</li>
+                  <li>Understanding of biological concepts related to gene expression and enrichment analysis</li>
+                </ul></p>
+
+                <h3>Tools and Packages</h3>
+                <p><ul>
+                  <li>DESeq2: A popular R package for differential gene expression analysis</li>
+                  <li>ClusterProfiler: An R package for functional enrichment analysis of gene clusters</li>
+                  <li>Python: For data preprocessing and manipulation</li>
+                  <li>Bash: For automation and workflow orchestration</li>
+                </ul></p>
+
+                <p>In a previous tutorial, we covered upstream RNASeq processing involving read quality control using FastQC and MultiQc, read alignment using Hisat2, and read quantification using featureCounts from the subread package. The result is a table containing gene expression data. In this tutorial, we will perform statistical analysis and functional enrichment analysis to find statistically significant genes that are differentially expressed and which pathways are enriched by those genes. If you have not seen the previous tutorial on upstream analysis, here is the <a href ="https://cyrillemesue.medium.com/a-comprehensive-rna-seq-upstream-pipeline-in-bash-with-fastqc-multiqc-trimomatic-hisat2-fb6348d9d741">link</a>.</p>
+
+                <h3>About Data</h3>
+                <p>Gene expression data can be largely found in the Gene Expression Omnibus (GEO) database (<a href= "https://www.ncbi.nlm.nih.gov/geo">https://www.ncbi.nlm.nih.gov/geo</a>). In this database, there are both raw reads (in fastq formats) and processed gene expression data. You can download any processed gene expression data that has raw counts. But I will be using the results obtained from the upstream analysis I performed in a previous tutorial.</p>
+
+                <p>Just as a recap, the dataset used is the “RNAseq in Alzheimer’s Disease patients” with accession <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53697">GSE53697</a>. You can choose to click on the link and download that raw data as it will offer you more challenges in the preprocessing part of this workflow. Or you can choose to go with this data (<a href="https://raw.githubusercontent.com/CyrilleMesue/RNASeq-Pipeline-Downstream/main/data/counts_data.txt">raw count data</a>, <a href="https://raw.githubusercontent.com/CyrilleMesue/RNASeq-Pipeline-Downstream/main/data/metadata.csv">metadata</a>) obtained from the previous tutorial.</p>
+
+                <blockquote>Please note that the counts in this dataset do not reflect real data as only a small fraction of the reads were sampled before the upstream workflow. So the results from this analysis are not meant for any sort of scientific reference.</blockquote>
+
+                <h3>Workflow Overview</h3>
+                <p><ol>
+                  <li>Preprocessing: Clean and match count data with metadata</li>
+                  <li>DESeq2 Analysis: Perform differential gene expression analysis</li>
+                  <li>Functional Enrichment Analysis: Identify enriched gene sets and pathways</li>
+                </ol></p>
+
+                <p>Let’s dive into each stage of the workflow:</p>
+
+                <h3>1. Preprocessing</h3>
+                <p>The metadata is prepared manually before the upstream analysis, and the reads are renamed to have a certain naming pattern that matches the sample names in the metadata. This must be done manually as several datasets have differences in their data organization. Once metadata and reads are well prepared, the rest of the processes can be run automated.</p>
+                <p>For the preprocessing step, we’ll write a Python script to clean and match count data with metadata. This script will perform tasks such as renaming columns, removing duplicates, and filtering genes with zero counts. Let’s create a Python script for this task:</p>
+
+                <pre><code class="python">#!/usr/bin/env python
+
+import argparse
+import pandas as pd
+
+def process_count_data(metadata_path, counts_data_path, output_path):
+    # load count data and metadata
+    metadata_df = pd.read_csv(metadata_path)
+    count_data_df = pd.read_csv(counts_data_path, sep="\t")
+
+    # rename columns
+    count_data_df.columns = ["geneSymbol"] + [name.split("/")[-1].split(".")[0] for name in count_data_df.columns[1:]]
+
+    # Assume 'sampleAccession' column in metadata contains the sample names in the desired order
+    desired_order = metadata_df['sampleAccession'].tolist()
+
+    # Reorder the columns of count data DataFrame according to the desired order
+    count_data_df = count_data_df.reindex(columns=["geneSymbol"]+desired_order)
+
+    # Remove duplicates based on GeneSymbol column
+    count_data_df = count_data_df.drop_duplicates(keep='first')
+    count_data_df = count_data_df.drop_duplicates(subset='geneSymbol', keep='first')
+
+    # Remove missing values
+    count_data_df = count_data_df.dropna().reset_index(drop=True)
+
+    # Remove genes with zero values across all samples
+    count_data_df = count_data_df.loc[:, (count_data_df != 0).any(axis=0)]
+
+    # Remove genes with negative values
+    count_data_df = count_data_df.loc[(count_data_df.iloc[:,1:] >= 0).all(axis=1), :]
+
+    # save count data
+    count_data_df.to_csv(output_path, index=False)
+
+def main():
+    parser = argparse.ArgumentParser(description="Process count data and metadata")
+    parser.add_argument("metadata", help="Path to the metadata CSV file")
+    parser.add_argument("counts_data", help="Path to the counts data TXT file")
+    parser.add_argument("output", help="Path to save the processed count data CSV file")
+    args = parser.parse_args()
+
+    process_count_data(args.metadata, args.counts_data, args.output)
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+                <p>This script takes three arguments: metadata file path, counts data file path, and output file path. It processes the count data and metadata, removes duplicates and genes with zero values across all samples, and saves the processed count data.</p>
+                <p>Now, let’s automate this preprocessing step in a bash script:</p>
+
+                <pre><code class="bash">#!/bin/bash
+echo "Starting preprocessing…"
+python post_upstream_processing.py data/metadata.csv data/counts_data.txt data/processed_count_data.csv
+echo "Preprocessing completed."</code></pre>
+
+                <p>This bash script executes the Python preprocessing script and provides necessary file paths as arguments.</p>
+
+                <h3>2. DESeq2 Analysis</h3>
+                <p>DESeq2 is a powerful R package widely used for differential gene expression analysis in RNA-Seq data. It employs robust statistical methods to identify genes that are differentially expressed between conditions, accounting for variability and sample-specific effects. The workflow typically involves normalization, estimation of dispersion, statistical testing, and visualization of results.</p>
+                <p>For DESeq2 analysis, we’ll write an R script that performs the analysis and generates relevant plots. This script will take count data and metadata as inputs and output differential gene expression results.</p>
+
+                <pre><code class="R">#!/usr/bin/env Rscript
+# differential_gene_expression_analysis.R
+require(optparse)
+
+#Parse arguments from command line
+options <- list(
+ make_option(c(" - input_count_data_path"), action = "store", type = "character", help="Path to the raw count data."),
+ make_option(c(" - metadata_path"), action = "store", type = "character", help="Path to the metadata."),
+ make_option(c(" - outdir"), action = "store", default = "data", type = "character", help="Output directory for storing differential gene expression analysis results."),
+ make_option(c(" - factor_level1"), action = "store", default = "Type", help="Class level 1 column name."),
+ make_option(c(" - factor_level2"), action = "store", default = "Type", help="Class level 2 column name.")
+)
+arguments <- parse_args(OptionParser(option_list = options))
+
+# Check if mandatory arguments are provided
+if (is.null(arguments$input_count_data_path) || is.null(arguments$metadata_path)) {
+ stop("Error: Mandatory arguments - input_count_data_path and - metadata_path are required.")
+}
+
+# create variable handles for parsed parameters
+input_count_data_path <- arguments$input_count_data_path
+metadata_path <- arguments$metadata_path
+outdir <- arguments$outdir
+factor_level1 <- arguments$factor_level1
+factor_level2 <- arguments$factor_level2
+
+# Load DESeq2 library
+library(DESeq2);
+library(dplyr);
+library(pheatmap)
+library(ggplot2)
+library("RColorBrewer")
+library(ggrepel)
+
+# create output directory
+outdir <- paste0(outdir, "/dge")
+dir.create(outdir)
+
+# Load count data
+count_data <- read.table(input_count_data_path, header = TRUE, row.names = 1, sep = ",")
+colnames(count_data)
+
+# load metadata
+metadata <- read.table(metadata_path, header = TRUE, row.names = 1, sep = ",")
+all(rownames(metadata) %in% colnames(count_data))
+all(rownames(metadata) == colnames(count_data))
+
+# set factor levels
+factors <- factor(metadata[[factor_level1]])
+metadata[[factor_level1]] <- factors
+
+# Create a deseq object and import the count data and metatdata
+dds <- DESeqDataSetFromMatrix(countData = round(count_data),
+ colData = metadata,
+ design = ~ Type)
+
+# set reference for group factors
+dds[[factor_level1]] <- relevel(dds[[factor_level1]], ref = "healthy control")
+
+# filter out low count genes
+# keep genes with at least N counts >= 10, where N = size of smallest group
+keep <- rowSums(counts(dds) >=10) >= min(table(metadata[[factor_level1]]))
+dds <- dds[keep,]
+
+# Perform Statistical Test using Deseq
+dds <- DESeq(dds, test = "Wald")
+
+# get results of Deseq
+deseq_result <- results(dds, cooksCutoff = FALSE, independentFiltering = FALSE)
+
+# process results
+deseq_result_df <- as.data.frame(deseq_result)
+deseq_result_df <- cbind(GeneName = row.names(deseq_result_df), deseq_result_df)
+
+# save results
+write.table(deseq_result_df, file = paste0(outdir, "/Deseq2-results-all.tsv"), row.names = F, sep="\t")
+
+# extract genes with padj < 0.05 and log2Foldchange <= -1 or >= 1
+deg <- subset(deseq_result, padj<0.05 & abs(log2FoldChange) >=1)
+
+# sort by adjusted p-values
+deg <- deg[order(deg$padj),]
+
+# save filtered results
+write.table(deg, file = paste0(outdir, "/Deseq2-results-filtered.tsv"), row.names = F, sep = "\t")
+
+#########################################
+# Gene expression data visualization
+#########################################
+################################################################################
+# Start MA Plot
+resLFC <- lfcShrink(dds, coef=resultsNames(dds)[2], type="apeglm") # remove noise
+# Save the plot as a PDF/PNG file
+pdf(paste0(outdir, "/MA_plot.pdf"), width = 8, height = 6)
+plotMA(deseq_result, ylim = c(-2, 2))
+dev.off()
+png(paste0(outdir, "/MA_plot.png"), width = 480, height = 360)
+plotMA(deseq_result, ylim = c(-2, 2))
+dev.off()
+pdf(paste0(outdir, "/MA_plot_denoised.pdf"), width = 8, height = 6)
+plotMA(resLFC, ylim=c(-2,2))
+dev.off()
+png(paste0(outdir, "/MA_plot_denoised.png"), width = 480, height = 360)
+plotMA(resLFC, ylim=c(-2,2))
+dev.off()
+# End
+
+################################################################################
+################################################################################
+# Start Dispersion plot
+pdf(paste0(outdir, "/Dispersion_plot.pdf"), width = 8, height = 6)
+plotDispEsts(dds)
+dev.off()
+png(paste0(outdir, "/Dispersion_plot.png"), width = 480, height = 360)
+plotDispEsts(dds)
+dev.off()
+# End
+
+################################################################################
+################################################################################
+# Start volcano plots # set groups
+old.pal <- palette(c("#FF0000", "#0000FF", "#808080")) # set colors
+par(mar=c(4,4,2,1), cex.main=1.5) # set margin size
+pdf(paste0(outdir, "/Volcano_plot.pdf"), width = 8, height = 6)
+
+#plot values
+plot(deseq_result$log2FoldChange, -log10(deseq_result$padj), col = "darkgray",
+ xlab="log2FoldChange", ylab="-log10(Padj)", pch=20, cex=0.5)
+with( subset(deseq_result, padj <0.05 & abs(log2FoldChange) >=1),
+ points(log2FoldChange, -log10(padj), pch =20, col=(sign(log2FoldChange) +3)/2, cex =1))
+legend("bottomleft", title=paste("Padj<", 0.05,sep=""),
+ legend=c("down regulated", "up regulated", "unchanged"), pch=20, col=1:3)
+dev.off()
+resLFC_df <- as.data.frame(deseq_result_df)
+resLFC_df$diffexpressed <- "no change"
+resLFC_df$diffexpressed[resLFC_df$log2FoldChange>1 & resLFC_df$padj<0.05] <- "up regulated"
+resLFC_df$diffexpressed[resLFC_df$log2FoldChange< (-1) & resLFC_df$padj<0.05] <- "down regulated"
+resLFC_df$diffexpressed[resLFC_df$padj>=0.05] <- "insignificant"
+resLFC_df$delabel <- NA
+volcano2 <- ggplot(data = resLFC_df, aes(x=log2FoldChange, y=-log10(padj), col=diffexpressed,label=GeneName))+
+ geom_point()+
+ theme_minimal()+
+ geom_text_repel()+
+ scale_color_manual(values=c("red","black","darkgray","blue"))+
+ theme(text=element_text(size=10))
+ggsave(filename = paste0(outdir, "/Volcano_plot2.png"), plot = volcano2 , bg = "white",device = "png", width = 8, height = 6)
+ggsave(filename = paste0(outdir, "/Volcano_plot2.pdf"), plot = volcano2 , device = "pdf", width = 8, height = 6)
+# End
+#############################################################################</code></pre>
+
+
+                <p>This script reads the processed count data and metadata, performs DESeq2 analysis, and generates relevant plots.</p>
+
+                <h3>3. Functional Enrichment Analysis</h3>
+                <p>In the subsequent phase of the analysis, another R script is crafted to execute functional enrichment analysis employing ClusterProfiler. This script is pivotal in unveiling biological insights embedded within the identified differentially expressed genes (DEGs). The first step entails inputting the list of DEGs obtained from the previous DESeq2 analysis, serving as the foundation for gene set enrichment analysis (GSEA). Subsequently, enriched gene sets are scrutinized through diverse visualization techniques, including bar charts and dot plots. These plots offer a comprehensive overview of the distribution and significance of enriched gene sets, facilitating the identification of key biological pathways.</p>
+                <p>Moreover, the analysis delves deeper to pinpoint significantly enriched pathways, such as those elucidated by the Kyoto Encyclopedia of Genes and Genomes (KEGG). These pathways represent interconnected networks of genes and biochemical reactions, shedding light on the underlying biological processes at play. Finally, the enriched pathways are interpreted within the context of the experimental conditions, unraveling their biological significance and implications. This interpretative step is crucial for elucidating the molecular mechanisms driving observed gene expression changes and discerning their relevance in the broader biological context of the study.</p>
+
+                <h3>Automating Functional Enrichment Analysis</h3>
+                <p>For the functional enrichment analysis using ClusterProfiler, we will write an R script that takes the results from the DESeq2 analysis and performs gene set enrichment and KEGG pathway analysis. Here’s an example R script for this task:</p>
+
+                <pre><code class="R">#!/usr/bin/env Rscript
+# gene_set_enrichment_analysis.R
+require(optparse)
+
+#Parse arguments from command line
+options <- list(
+  make_option(c("--deseq2_results_path"), action = "store", type = "character", help="Path to the input data. Output from Deseq2"),
+  make_option(c("--outdir"), action = "store", default = "data", type = "character", help="Output directory."),
+  make_option(c("--geneNamingTYpe"), action = "store", default = "ALIAS", help="Which gene naming convention is used. e.g ALIAS, ENSEMBL, etc"),
+  make_option(c("--kegg_organism_db"), action = "store", default = "org.Hs.eg.db", help="Kegg organism database."),
+  make_option(c("--kegg_organism"), action = "store", default = "hsa", help="Kegg code for given organism.")
+)
+arguments <- parse_args(OptionParser(option_list = options))
+
+# Check if mandatory arguments are provided
+if (is.null(arguments$deseq2_results_path)) {
+  stop("Error: Mandatory arguments --deseq2_results_path is required.")
+}
+
+# create variable handles for parsed parameters
+deseq2_results_path <- arguments$deseq2_results_path
+outdir <- arguments$outdir
+geneNamingTYpe <- arguments$geneNamingTYpe
+kegg_organism <- arguments$kegg_organism
+kegg_organism_db <- arguments$kegg_organism_db
+
+# load required packages
+library(ggplot2)
+library(clusterProfiler)
+library(enrichplot)
+library(kegg_organism_db, character.only = TRUE)
+library('cowplot')
+
+
+# # set working directory
+# setwd(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
+
+# create output directories
+dir.create(paste0(outdir, "/gsea"))
+dir.create(paste0(outdir, "/kegg"))
+
+#############################
+# Load and Prepare Input Data
+#############################
+
+# reading in data from deseq2
+df = read.csv(deseq2_results_path, header=TRUE, sep = "\t")
+
+# we want the log2 fold change 
+original_gene_list <- df$log2FoldChange
+
+# name the vector
+names(original_gene_list) <- df$GeneName
+
+# omit any NA values 
+gene_list<-na.omit(original_gene_list)
+
+# sort the list in decreasing order (required for clusterProfiler)
+gene_list = sort(gene_list, decreasing = TRUE)
+
+#############################
+# Gene Set Enrichment
+#############################
+# perform gene set enrichment analysis
+gse <- gseGO(geneList=gene_list, 
+             ont ="ALL", 
+             keyType = geneNamingTYpe,
+             minGSSize = 3, 
+             maxGSSize = 800, 
+             pvalueCutoff = 0.05, 
+             verbose = TRUE, 
+             OrgDb = kegg_organism_db, 
+             pAdjustMethod = "none")
+
+# save enrichment results
+write.table(gse, file = paste0(outdir,"/gsea/gene-set-enrichment-results.tsv"), row.names = F, sep="\t")
+
+###########################################
+# Gene Set Enrichment Results Visualization
+###########################################
+# import the dose package
+require(DOSE)
+
+# Dot plot of enriched terms
+dotplot1 <- dotplot(gse, showCategory=20, split=".sign", font.size =7, color = "p.adjust",label_format = 100)
+ggsave(filename = paste0(outdir, "/gsea/gseGO-dotplot-enriched-terms.png"), plot = dotplot1 , bg = "white",device = "png", width = 8, height = 6)
+ggsave(filename = paste0(outdir, "/gsea/gseGO-dotplot-enriched-terms.pdf"), plot = dotplot1 , device = "pdf", width = 8, height = 6)
+
+
+################################################################################
+# KEGG Gene Set Enrichment Analysis
+################################################################################
+# Convert gene IDs for gseKEGG function. We will lose some genes here because not all IDs will be converted
+ids<-bitr(names(original_gene_list), fromType = geneNamingTYpe, toType = "ENTREZID", OrgDb=kegg_organism_db)
+# remove duplicate IDS 
+dedup_ids = ids[!duplicated(ids[c(geneNamingTYpe)]),]
+
+# Create a new dataframe df2 which has only the genes which were successfully mapped using the bitr function above
+df2 = df[df$GeneName %in% dedup_ids[[geneNamingTYpe]],]
+
+# Create a new column in df2 with the corresponding ENTREZ IDs
+df2$Y = dedup_ids$ENTREZID
+
+# Create a vector of the gene unuiverse
+kegg_gene_list <- df2$log2FoldChange
+
+# Name vector with ENTREZ ids
+names(kegg_gene_list) <- df2$Y
+
+# omit any NA values 
+kegg_gene_list<-na.omit(kegg_gene_list)
+
+# sort the list in decreasing order (required for clusterProfiler)
+kegg_gene_list = sort(kegg_gene_list, decreasing = TRUE)
+
+# create a gseKEGG object
+
+kk2 <- gseKEGG(geneList     = kegg_gene_list,
+               organism     = kegg_organism,
+               minGSSize    = 3,
+               maxGSSize    = 800,
+               pvalueCutoff = 0.05,
+               pAdjustMethod = "none",
+               keyType       = "ncbi-geneid")
+
+# save kegg pathway analysis results
+write.table(kk2, file = paste0(outdir,"/kegg/kegg-analysis-results.tsv"), row.names = F, sep="\t")
+
+# Dot plot of enriched terms kegg
+dotplot1 <- dotplot(kk2, showCategory=20, split=".sign", font.size =7, label_format = 100)
+ggsave(filename = paste0(outdir, "/kegg/gseKEGG-dotplot-enriched-terms.png"), plot = dotplot1 , bg = "white",device = "png", width = 8, height = 6)
+ggsave(filename = paste0(outdir, "/kegg/gseKEGG-dotplot-enriched-terms.pdf"), plot = dotplot1 , device = "pdf", width = 8, height = 6)</code></pre>
+
+                <p>This script reads the statistical test results from DESeq2, performs gene set enrichment analysis, and generates relevant plots.</p>
+
+                <h3>Explanation of the Automation Script</h3>
+                <pre><code class="bash">#!/bin/bash
+
+# Display message indicating post-upstream processing is starting
+echo "Starting post-upstream processing..."
+
+# Run post-upstream processing Python script
+python scripts/post-upstream-processing.py data/metadata.csv data/counts_data.txt data/count_data.csv
+
+# Display message indicating post-upstream processing is done
+echo "Post-upstream processing done."
+
+# Display message indicating differential gene expression analysis is starting
+echo "Starting differential gene expression analysis..."
+
+# Run differential gene expression analysis script
+Rscript scripts/differential-gene-expression-analysis.R --input_count_data_path "data/count_data.csv" --metadata_path "data/metadata.csv"
+
+# Display message indicating differential gene expression analysis is done
+echo "Differential gene expression analysis done."
+
+# Display message indicating gene set enrichment analysis is starting
+echo "Starting gene set enrichment analysis..."
+
+# Run gene set enrichment analysis script
+Rscript scripts/gene-set-enrichment-analysis.R --deseq2_results_path data/dge/Deseq2-results-all.tsv --geneNamingTYpe "ENSEMBL"
+
+# Display message indicating gene set enrichment analysis is done
+echo "Gene set enrichment analysis done."</code></pre>
+
+                <p><ol>
+                  <li>Post-Upstream Processing: The script starts by calling the Python script for post-upstream processing of the count data. It takes metadata and raw count data as inputs and generates processed count data.</li>
+                  <li>Differential Gene Expression Analysis: Next, the script runs the R script for differential gene expression analysis using DESeq2. It takes the processed count data and metadata as inputs and performs DESeq2 analysis to identify differentially expressed genes.</li>
+                  <li>Gene Set Enrichment Analysis: Finally, the script executes the R script for gene set enrichment analysis using ClusterProfiler. It takes the DESeq2 results as input and performs functional enrichment analysis to identify enriched gene sets and pathways.</li>
+                </ol></p>
+
+                <h3>Conclusion</h3>
+                <p>In this tutorial, we have demonstrated a step-by-step RNA-Seq downstream analysis workflow using DESeq2 and ClusterProfiler, with a focus on automation. By following this guide, researchers can efficiently analyze their RNA-Seq data, identify differentially expressed genes, and gain insights into the underlying biological processes. Automating the workflow enhances reproducibility and scalability, enabling researchers to focus on the interpretation of results and biological discoveries.</p>
+                <p>Stay tuned as next, we will explore how to automate a complete end-to-end workflow with Nextflow. Also, keep in touch as in the future I will be working on several case studies where we will examine the results of each of these analyses in detail.</p>
+                <p>Access full code for this tutorial <a href="https://github.com/CyrilleMesue/RNASeq-Pipeline-Downstream">here</a>.</p>
+                
+                <h3>References</h3>
+                <p><ol>
+                  <li>DESeq2 tutorial: <a href="https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html">https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html</a></li>
+                  <li>ClusterProfiler tutorial: <a href = "https://learn.gencore.bio.nyu.edu/rna-seq-analysis/gene-set-enrichment-analysis/">https://learn.gencore.bio.nyu.edu/rna-seq-analysis/gene-set-enrichment-analysis/</a></li>
+                </ol></p>
+
+
+              </div><!-- End post content -->
+
+
+            </article><!-- End blog post -->
+
+            <div class="post-author d-flex align-items-center">
+              <img src="../assets/img/profile.png" class="rounded-circle flex-shrink-0" alt="">
+              <div>
+                <h4>Cyrille Njume</h4>
+                <div class="social-links">
+                  <a href="https://twitter.com/CyrilleMesue#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100078245222182"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cy_njume/"><i class="biu bi-instagram"></i></a>
+                  <a href="https://join.skype.com/invite/Io32VYWhujAc" class="google-plus"><i class="bi bi-skype"></i></a>
+                  <a href="https://www.linkedin.com/in/cyrillenjume/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <p>
+                  Hello! Thanks for taking the time to read my blog post. I'd love to hear your thoughts and insights, so please feel free to share them in the comment section below. Let's connect on social media too!
+                </p>
+              </div>
+            </div><!-- End post author -->
+
+          <giscus-widget
+            id="comments"
+            repo="CyrilleMesue/Portfolio"
+            repoid="R_kgDOH9qPaA"
+            category="General"
+            categoryid="DIC_kwDOH9qPaM4Ce3Oh"
+            mapping="title"
+            term="Welcome to giscus!"
+            reactionsenabled="1"
+            emitmetadata="0"
+            inputposition="top"
+            theme="light_protanopia"
+            lang="en"
+            loading="lazy"
+          ></giscus-widget>
+
+          </div>
+
+          <div class="col-lg-4">
+            
+            <div class="sidebar">
+              <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div><!-- End Blog Sidebar -->
+
+            <div class="sidebar">
+              <div class="sidebar-item recent-posts">
+                <h3 class="sidebar-title">Recent Posts</h3>
+                <div class="mt-3" id="recentPosts">
+                  <!-- Recent posts will be dynamically generated here -->
+                </div>
+              </div>
+            </div><!-- End Blog Sidebar -->
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Bioinformatics Developer</span></strong>. All Rights Reserved
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://twitter.com/CyrilleMesue" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100078245222182" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/cy_njume/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://join.skype.com/invite/Io32VYWhujAc" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="https://www.linkedin.com/in/cyrillenjume/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Table of Contents JS -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+
+  <script>
+    // Load the JSON file
+    fetch('https://raw.githubusercontent.com/CyrilleMesue/archives/main/jsons/recent-posts.json')
+      .then(response => response.json())
+      .then(data => {
+        const recentPostsContainer = document.getElementById('recentPosts');
+
+        // Loop through each post and create HTML
+        data.forEach(post => {
+          const postItem = document.createElement('div');
+          postItem.classList.add('post-item', 'mt-3');
+
+          const image = document.createElement('img');
+          image.src = post.image;
+          image.alt = '';
+          image.classList.add('flex-shrink-0');
+          postItem.appendChild(image);
+
+          const postDetails = document.createElement('div');
+          const title = document.createElement('h4');
+          const link = document.createElement('a');
+          link.href = post.blogPath;
+          link.textContent = post.title;
+          title.appendChild(link);
+          postDetails.appendChild(title);
+
+          const time = document.createElement('time');
+          time.setAttribute('datetime', '2020-01-01'); // Change date if needed
+          time.textContent = post.date;
+          postDetails.appendChild(time);
+
+          postItem.appendChild(postDetails);
+
+          recentPostsContainer.appendChild(postItem);
+        });
+      })
+      .catch(error => console.error('Error fetching recent posts:', error));
+  </script>
+
+<!-- esm.sh -->
+<script type="module" src="https://esm.sh/giscus"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
